@@ -1,0 +1,28 @@
+<%- include("partials/header.ejs") %>
+<section class="container_todolist">
+  <div class="heading">
+    <img class="heading__img" src="pictures/list-list-svgrepo-com.png">
+    <h1 class="heading__title">To-Do List</h1>
+  </div>
+  <form class="form" action="/" method="POST" id="form">
+    <div>
+      <label class="form__label" for="todo">~ Today I need to ~</label>
+      <input class="form__input" name="newItem" "text" size="30" autocomplete="off" required autofocus>
+      <button class="button"><span>Submit</span></button>
+    </div>
+  </form>
+  <div class="todolist_container">
+    <ul class="toDoList">
+      <% toDoList.forEach(item => { %>
+        <li class="list" data-id="<%= item.itemId %>" onclick="removeItem('<%= item.itemId %>')" >
+          <%= item.newItem %>            
+        </li>
+      <% }); %> 
+    </ul>
+  </div>
+</section>
+
+<%- include("partials/footer.ejs") %>
+
+<!-- Calling for JS script only for deleting todo-list items -->
+<%- include("../public/script.ejs") %>

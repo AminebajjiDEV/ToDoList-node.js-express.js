@@ -1,0 +1,172 @@
+<%- include("partials/header.ejs") %>
+
+
+    <div class="tilteOfProject">
+        <H4 class="project_title"> To-Do-List</H4>
+        <p class="introduction">This is a simple web application that allows users to manage a to-do list. The
+            application is built using Express.js for the server-side logic and EJS for dynamic
+            HTML rendering.</p>
+    </div>
+    <hr class="dots">
+
+    <div class="embedded_javaScript">
+
+        <div class="ejs_description">
+            <h3>Frontend Templating (EJS)</h3>
+            <p class="ejs_text">This App uses EJS for dynamic HTML rendering.
+                It includes header and footer files for consistency across pages using " <~%- include() %~> ".
+                    The script file manages dynamic functionalities like deleting todo-list items.
+                    EJS simplifies HTML generation, making it easier to manage code and maintain consistency.</p>
+            <img class="ejs_index_picture" src="pictures/index-ejsFile.PNG" alt="ejs_index_picture">
+
+        </div>
+
+        <div class="include_usage">
+            <h1>- What is " include() " used for : </h1>
+            <img class="inc_img" src="pictures/includes combined.png" alt="include_header_pic">
+            <p class="include_text"> - " include() " is an EJS directive used to include the
+                content of another EJS
+                file (exp : "header.ejs") into the current EJS file, while maintaining consistency across
+                multiple pages by reusing common elements like (header.ejs ; footer.ejs) reducing code
+                repetition.</p>
+            <img class="partials_img" src="pictures/partials.PNG" alt="partials_pic">
+            <p class="include_text">partials are reusable sections of HTML that are stored in separate files. These
+                partials can then be
+                included in other EJS templates using the <~%- include("partials/file.ejs") %~> </p>
+
+        </div>
+
+        <div class="delete_op">
+            <h1>- Client-Side Scripting (Delete operation) :</h1>
+            <img class="inc_script_img" src="pictures/include script.PNG" alt="include_script_pic">
+            <img class="script_img" src="pictures/Script.PNG" alt="js_script_pic">
+            <p class="operation_txt">This operation involves interactions between the client-side (user interface)
+                and server-side components to identify, process, and execute the deletion of the selected item.<br>
+                The code `include("../public/script.ejs")` is used to include a JavaScript file specifically for
+                deleting items from the to-do list.
+            </p>
+            <h1>- Script explanations (DOM manipulation) :</h1>
+            <ul class="script_exp">
+                <li>function removeItem(itemId) { ... } :</li>
+                <p>This declares a function named removeItem that takes one parameter, itemId, which represents the
+                    unique identifier of the item to be removed.</p>
+                <li>fetch('/delete', { ... }) :</li>
+                <p>This initiates an HTTP POST request to the '/delete' route on the server. It sends along the itemId
+                    in the request body as JSON data.</p>
+                <p>On a side note : "JSON provides a common data format that both the
+                    client-side JavaScript and the server-side application can easily understand and process."</p>
+                <li>headers: { 'Content-Type': 'application/json' } :</li>
+                <p>Sets the request header to indicate that the content being sent is in JSON format.</p>
+                <li>body: JSON.stringify({ itemId }) :</li>
+                <p>Converts the itemId into a JSON string and sends it in the request body.</p>
+                <li>.then(() => { ... }) :</li>
+                <p>If the request is successful, this part of the code executes. It removes the corresponding item from
+                    the DOM (webpage) by finding the item with the matching data-id attribute and removing it.</p>
+                <li>catch(err => console.error('Error removing item:', err)):</li>
+                <p>If there's an error during the request, this part handles it by logging an error message to the
+                    console.</p>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <hr class="dots">
+
+    <div class="server_side">
+        <div class="express_description">
+            <h3>Server Side</h3>
+            <h2>Express.js / Node.js :</h2>
+
+            <p class="exp_txt_intro">In this app, Express.js is a web application framework for Node.js. Its role is to
+                handle HTTP requests and responses. Express.js simplifies the process of handling HTTP requests and
+                building web applications in Node.js by providing a robust set of features and tools.</p>
+
+            <div class="express_usage">
+                <h1>-Here's how Express.js is utilized in this app :</h1>
+                <img class="express_index_picture" src="pictures/Index-js top to 31.PNG" alt="js_index_picture">
+                <img class="express_index_picture2" src="pictures/Index-js 32 to bottom.PNG" alt="js_index_picture">
+                <ul class="express_code_desc">
+                    <li class="setting_up_the_server">1.Setting up the server :</li>
+                    <p>Express is imported, and the app variable,
+                        representing our web application, is instantiated using express().</p>
+
+                    <li class="middleware">2.Middleware :</li>
+                    <p>Express middleware functions are applied with app.use().
+                        These functions have access to the request and response objects and can be used to handle HTTP
+                        requests. Specifically:<br>
+                        - `bodyParser.urlencoded({ extended: true })` parses incoming request bodies in a URL-encoded
+                        format.<br>
+                        - `express.static('public')` serves static files from the "public" directory, such as images,
+                        CSS
+                        files, and JavaScript files.
+                    </p>
+
+                    <li class="routing">3.Routing :</li>
+                    <p> Express provides methods to define routes for different HTTP methods (GET, POST, etc.). In this
+                        app we are using :<br>
+                        - app.post() creates a route for handling data submissions via HTTP POST requests. When someone
+                        submits data to the root URL '/', a function is called to process that data.<br>
+
+                        - app.get() creates a route for handling HTTP GET requests. When someone accesses the root URL
+                        '/', it renders an EJS template (index.ejs) with specific data passed to it.
+                    </p>
+
+                    <li class="handling_requests">4.Handling Requests :</li>
+                    <p>Handling Requests: Express routes are defined to handle specific requests. For example:<br>
+
+                        - app.post('/', ...) handles POST requests to the root URL '/'. It retrieves data from the
+                        request
+                        body, adds it to the itemList array, and then redirects the client back to the root URL.<br>
+                        - app.post('/delete', ...) handles POST requests to the '/delete' URL. It removes an item from
+                        the
+                        itemList array based on the provided item ID.
+                    </p>
+
+                    <li class="listening_for_incoming_connections">5.Listening for incoming connections :</li>
+                    <p>Finally, app.listen() starts the Express server and listens on the specified port (3000 in this
+                        case). <br> The server starts, it prints a message to the console indicating that it's listening
+                        on the specified port.
+                    </p>
+                </ul>
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+    <hr class="dots">
+
+    <div class="conclusion">
+        <h2>Conclusion</h2>
+        <p>Overall, this web app provides a simple interface for users to manage their to-do lists, allowing them to
+            add new items, and remove items as needed.</p>
+        <P>For my first ejs/express.js/node.js project this was a very big step for me (jumping from theory to
+            practice).</P>
+        <P>Happy Coding to Everyone ☺☺</P>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <%- include("partials/footer.ejs") %>

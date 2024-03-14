@@ -1,0 +1,15 @@
+<script type="text/javascript">
+  function removeItem(itemId) {
+    fetch('/delete', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ itemId })
+    }).then(() => {
+      // Remove the item from the DOM
+      const itemToRemove = document.querySelector(`[data-id="${itemId}"]`);
+      itemToRemove.remove();
+    }).catch(err => console.error('Error removing item:', err))
+  }
+</script>
