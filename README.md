@@ -40,7 +40,7 @@ This is my first capstone-project as an introduction to Node.js, Express.js and 
 <h3>5. Submit a pull request.</h3>
 
 <h1>License</h1>
-   <h3>This project is licensed under the MIT License. See the LICENSE file for details.</h3>
+   <h3>This project is licensed under the GPL-3.0 license. See the LICENSE file for details.</h3>
 <h1>Acknowledgements</h1>
   <li>Node.js</li>
   <li>Express.js</li>
