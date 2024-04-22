@@ -14,32 +14,32 @@ A simple TodoList application built using Node.js, Express.js, and EJS (Embedded
 
 ## Installation
 
-<h1>1. Clone the repository:</h1>
+<h3>1. Clone the repository:</h3>
    ```bash
    git clone https://github.com/yourusername/todo-list.git
    
-<h1>2. Navigate to the project directory:</h1>
+<h3>2. Navigate to the project directory:</h3>
     cd "to your todo-list file location"
 
-<h1>3. Install dependencies:</h1>
+<h3>3. Install dependencies:</h3>
      npm install  // to install the necessary dependencies 
      
-<h3>Usage</h3>
+<h1>Usage</h1>
 
-<h1>1. Start the server:</h1>
+<h3>1. Start the server:</h3>
    npm index.js
-<h1>2. Open your web browser and navigate to http://localhost:3000.</h1>
+<h3>2. Open your web browser and navigate to http://localhost:3000.</h3>
 
-<h3>Contributing</h3>
-<h2>1. Fork the repository.</h2>
-<h2>2. Create a new branch: git checkout -b feature/new-feature.</h2>
-<h2>3. Make your changes and commit: git commit -m 'Add new feature'.</h2>
-<h2>4. Push to the branch: git push origin feature/new-feature.</h2>
-<h2>5. Submit a pull request.</h2>
+<h1>Contributing</h1>
+<h3>1. Fork the repository.</h3>
+<h3>2. Create a new branch: git checkout -b feature/new-feature.</h3>
+<h3>3. Make your changes and commit: git commit -m 'Add new feature'.</h3>
+<h3>4. Push to the branch: git push origin feature/new-feature.</h3>
+<h3>5. Submit a pull request.</h3>
 
-<h3>License</h3>
-   <h1>This project is licensed under the MIT License. See the LICENSE file for details.</h1>
-<h3>Acknowledgements</h3>
-<li>Node.js</li>
-<li>Express.js</li>
-<li>EJS</li>
+<h1>License</h1>
+   <h3>This project is licensed under the MIT License. See the LICENSE file for details.</h3>
+<h1>Acknowledgements</h1>
+  <li>Node.js</li>
+  <li>Express.js</li>
+  <li>EJS</li>
