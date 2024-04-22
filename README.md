@@ -1,6 +1,8 @@
 # TodoList App with Node.js, Express.js, and EJS
 
 A simple TodoList application built using Node.js, Express.js, and EJS (Embedded JavaScript) for server-side rendering.
+This is my first capstone-project as an introduction to Node.js, Express.js and EJS
+
 
 ## Features
 
@@ -16,7 +18,7 @@ A simple TodoList application built using Node.js, Express.js, and EJS (Embedded
 
 <h3>1. Clone the repository:</h3>
    ```bash
-   git clone https://github.com/yourusername/todo-list.git
+   git clone https://github.com/AminebajjiDEV/ToDoList-node.js-express.js.git
    
 <h3>2. Navigate to the project directory:</h3>
     cd "to your todo-list file location"
