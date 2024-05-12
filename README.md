@@ -29,12 +29,18 @@ This is my first capstone-project as an introduction to Node.js, Express.js and 
 ```
 
 <h3>3. Install dependencies:</h3>
-     npm install  // to install the necessary dependencies 
-     
+
+   ```
+     npm install  
+```
+
 <h1>Usage</h1>
 
 <h3>1. Start the server:</h3>
+
+  ```
    npm index.js
+   ```
 <h3>2. Open your web browser and navigate to http://localhost:3000.</h3>
 
 <h1>Contributing</h1>
