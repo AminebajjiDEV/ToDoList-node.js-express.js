@@ -18,11 +18,15 @@ This is my first capstone-project as an introduction to Node.js, Express.js and 
 ## Installation
 
 <h3>1. Clone the repository:</h3>
-   ```bash
+
+   ```
    git clone https://github.com/AminebajjiDEV/ToDoList-node.js-express.js.git
-   
+```
 <h3>2. Navigate to the project directory:</h3>
-    cd "to your todo-list file location"
+
+   ```
+    cd ToDoList-node.js-express.js
+```
 
 <h3>3. Install dependencies:</h3>
      npm install  // to install the necessary dependencies 
@@ -46,3 +50,4 @@ This is my first capstone-project as an introduction to Node.js, Express.js and 
   <li>Node.js</li>
   <li>Express.js</li>
   <li>EJS</li>
+
