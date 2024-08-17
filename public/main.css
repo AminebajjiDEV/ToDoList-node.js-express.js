@@ -9,7 +9,8 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: #CCFFBD;
+  background-image: url('/pictures/bg7.png');
+  background-size: cover;
 }
 
 @media only screen and (min-width: 100vh) {
@@ -31,9 +32,9 @@ body {
   float: none;
   display: flexbox;
   background-color: #7ECA9C;
-  padding: 16px 18px;
+  padding: 5px 18px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 15px;
   font-family: "Poppins", sans-serif;
 }
 
@@ -182,22 +183,41 @@ body {
     position: relative;
     padding: 0.5rem;
   }
-
-  li:hover {
-    text-decoration: line-through wavy #243763;
-  }
 }
+
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.delete {
+  margin: 10px;
+  background: transparent;
+  border: transparent;
+}
+
+.edit {
+  background: transparent;
+  border: transparent;
+}
+
+.icon {
+  height: 20px;
+  background: transparent;
+}
+
 
 /* footer */
 .footer {
-  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: auto;
   margin-bottom: 0;
   width: 100%;
-  text-align: center;
   background: #7ECA9C;
   min-height: 100px;
-  padding: 20px;
+  padding: 10px 10px 0px;
   font-family: "Poppins", sans-serif;
 }
 
@@ -205,11 +225,14 @@ body {
   font-size: 1.3em;
   font-weight: 450;
   color: #40394A;
-  margin: 10px auto;
-  display: inline;
-  transition: 0.5s;
+  margin: 10px 5px;
   text-decoration: none;
   opacity: 0.75;
+
+}
+
+.footer .menu {
+  padding: 0;
 }
 
 .copyright {
