@@ -9,8 +9,7 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  background-image: url('/pictures/bg7.png');
-  background-size: cover;
+  background-color: #ccffbd;
 }
 
 @media only screen and (min-width: 100vh) {
@@ -25,10 +24,15 @@ body {
   }
 }
 
+
+main {
+  background: url('/pictures/bg8.svg');
+  background-size: cover;
+}
+
 /* Navbar area////////////////////////////////////////////// */
 .navbar {
   margin-top: auto;
-  margin-bottom: 10px;
   float: none;
   display: flexbox;
   background-color: #7ECA9C;
@@ -63,12 +67,10 @@ body {
 
   width: 100%;
   height: auto;
-  margin: auto;
-  margin-top: 30px;
-  margin-bottom: 30px;
   min-height: 550px;
   max-width: 600px;
   min-width: 350px;
+  margin: 30px auto;
   background: #f6f1e9;
   background-image: radial-gradient(#bfc0c1 7.2%, transparent 0);
   background-size: 25px 25px;
@@ -77,7 +79,6 @@ body {
   border-color: #1c1427e0;
   padding: 1rem;
   box-sizing: border-box;
-
 
 }
 
@@ -190,6 +191,7 @@ body {
   flex-direction: row;
   align-items: center;
 }
+
 .delete {
   margin: 10px;
   background: transparent;
@@ -199,6 +201,18 @@ body {
 .edit {
   background: transparent;
   border: transparent;
+  font-family: 'Gochi Hand', cursive;
+}
+
+.edit input {
+  background-color: transparent;
+  border: transparent;
+  border-bottom: dashed 3px #40394A;
+
+  &:focus {
+    outline: none;
+    border: solid 3px #40394A;
+  }
 }
 
 .icon {
@@ -264,8 +278,9 @@ body {
   line-height: 1.7;
 
 }
- /* the three seperator dots*/
-.dots { 
+
+/* the three seperator dots*/
+.dots {
   border-style: dotted none none;
   border-width: 10px;
   border-color: #40394A;
@@ -386,6 +401,7 @@ body {
   border-style: solid;
   box-sizing: border-box;
 }
+
 .script_img {
   float: right;
   height: auto;
@@ -397,22 +413,26 @@ body {
   border-style: solid;
   box-sizing: border-box;
 }
+
 .script_exp {
   width: 40%;
   margin: 30px 30px 40px;
   font-size: 1.2rem;
 }
-.script_exp li{
+
+.script_exp li {
   font-size: 1.2rem;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   color: #000000;
 }
-.script_exp p{
+
+.script_exp p {
   font-size: 1.2rem;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
 }
+
 /* Server side */
 .server_side {
   display: flex;
@@ -452,6 +472,7 @@ body {
   float: left;
   margin: 10px 20px auto 20px;
 }
+
 .express_usage h1 {
   float: left;
   width: 80%;
@@ -461,6 +482,7 @@ body {
   font-weight: 650;
   color: #40394A;
 }
+
 .express_index_picture {
   float: left;
   height: auto;
@@ -508,7 +530,8 @@ body {
 .conclusion {
   margin: 30px;
 }
-.conclusion h2{
+
+.conclusion h2 {
   text-align: center;
   width: 80%;
   margin: 30px auto;
@@ -517,7 +540,8 @@ body {
   font-weight: 650;
   color: #40394A;
 }
-.conclusion p{
+
+.conclusion p {
   margin: 10px;
   text-align: center;
   font-size: 1.2rem;
